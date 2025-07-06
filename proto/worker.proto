@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package worker;
+
+service Worker {
+    rpc SendDataAndTask(SendDataAndTaskRequest) returns (EmptyResponse) {}
+    rpc GetKeyValuePairs(GetKeyValuePairsRequest) returns (GetKeyValuePairsResponse) {}
+}
+
+message SendDataAndTaskRequest {
+    string role = 1;
+    string work = 2;
+    int32 n_reducers = 3;
+    string task_id = 4;
+    repeated string file_paths = 5;
+    string mapper_ip = 6;
+    int32 mapper_port = 7;
+}
+
+message GetKeyValuePairsRequest {
+    string file_path = 1;
+}
+
+message GetKeyValuePairsResponse {
+    repeated string key_value_pairs = 1;
+}
+
+message EmptyResponse {}

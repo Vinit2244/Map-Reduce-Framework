@@ -1,0 +1,10 @@
+orange 1
+strawberry 1
+orange 1
+rose 1
+rose 1
+pineapple 1
+orange 1
+name 1
+vinit 1
+strawberry 1
